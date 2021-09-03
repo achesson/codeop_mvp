@@ -60,7 +60,7 @@ function SingleWorkoutView(props) {
     if (!workout) {
         return <Error404View />;
     } 
-    let circuits = workout.circuits;
+    //let circuits = workout.circuits;
    
 
     return (

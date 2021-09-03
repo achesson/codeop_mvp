@@ -11,7 +11,7 @@ function DisplaySingleCircuitComponent(props) {
            
            <span id="exercises">
            { props.c.exercises.map((e)=> (
-             <p key={e.id}>  {e.exerciseName} {' '} {e.timeOn} {':'} {e.timeOff} </p>))}
+             <p key={e.exerciseName}>  {e.exerciseName} {' '} {e.timeOn} {':'} {e.timeOff} </p>))}
             </span>
 
            <h4> {props.c.numberOfSets} {' Sets - '}

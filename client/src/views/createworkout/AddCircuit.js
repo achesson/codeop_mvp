@@ -16,20 +16,20 @@ let EmptyCircuitData = {
 function AddCircuit(props) {
   const [exercises, setExercises] = useState([]);
   const [circuit, setCircuit] = useState(EmptyCircuitData);
-  const [circuitID, setCircuitID] = useState(4);
-  let [nextId, setNextId] = useState(14);
+  //const [circuitID, setCircuitID] = useState(4);
+  //let [nextId, setNextId] = useState(14);
   let [circuitNamesIX, setCircuitNamesIX] = useState(0)
 
   //adds an exercise from AddExercise.js to exercises state
   const addExercise = (newExercise) => {
  
-    newExercise.id = nextId; //create ID
+   // newExercise.id = nextId; //create ID
     let newExercises = [...exercises, newExercise]; //add exercise to current circuit exercises
 
     //reset
-    let newNextId = nextId + 1; //increment id
+    //let newNextId = nextId + 1; //increment id
     setExercises(exercises => newExercises); //set the new circuit
-    setNextId(nextId => newNextId); //set nextId
+    //setNextId(nextId => newNextId); //set nextId
 
   }
 
@@ -40,7 +40,7 @@ function AddCircuit(props) {
 
     let newCircuit = {...circuit};
 
-    newCircuit.circuitID = circuitID;
+   // newCircuit.circuitID = circuitID;
     newCircuit.circuitName = circuitNames[circuitNamesIX]; //add letter name to circuit e.g. 'A'
     newCircuit.exercises = exercises; //add exercises
     newCircuit.numberOfSets = circuit.numberOfSets; //add number of sets
@@ -55,9 +55,9 @@ function AddCircuit(props) {
     setExercises([]);
     setCircuit(EmptyCircuitData)
     let newCircuitNamesIX = circuitNamesIX + 1;
-    let newCircuitID = circuitID + 1
+    //let newCircuitID = circuitID + 1
     setCircuitNamesIX(circuitNamesIX => newCircuitNamesIX);
-    setCircuitID(circuitID => newCircuitID);
+   //setCircuitID(circuitID => newCircuitID);
   }
   
 
